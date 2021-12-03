@@ -1,11 +1,11 @@
 version: 2.1
 jobs:
-  print_hello:
+  build:
     docker:
-      - image: circleci/node:13.8.0
+      - image: circleci/node:2020.01
     steps:
       - checkout
       - run:
-        name: "echo an env var that is part of our project"
-          command: |
-            echo $MY_NAME # this env var must be set within the project
+          name: "echo an env var that is part of our project"
+            command: |
+              echo $MY_NAME # this env var must be set within the project
